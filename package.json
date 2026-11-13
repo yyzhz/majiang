@@ -1,0 +1,20 @@
+{
+  "name": "hongzhong-mahjong-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "红中麻将 · 四人自摸局（Capacitor Android 封装）",
+  "scripts": {
+    "web": "node scripts/build-web.mjs",
+    "sync": "npm run web && cap sync android",
+    "apk": "npm run sync && bash scripts/build-apk.sh",
+    "apk:win": "powershell -ExecutionPolicy Bypass -File scripts/build-apk.ps1",
+    "dev": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.2.3",
+    "@capacitor/core": "6.2.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.3"
+  }
+}
